@@ -11,9 +11,9 @@
 
 <link href='/static/forms/client/css/3972046728-formview_st_ltr.css' type='text/css' rel='stylesheet'>
 <style type="text/css">
-body {
+/* body {
   background-color: rgb(255,154,45);
-}
+} */
 
 .ss-form-container, .ss-resp-card {
   background-color: rgb(255,255,255);
@@ -232,6 +232,10 @@ input[type='text'], input:not([type]), textarea {
 }
 }
 
+h6{
+  color: #cec8c8;
+}
+
 </style>
 
 
@@ -322,33 +326,26 @@ input[type='text'], input:not([type]), textarea {
 <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
 
 <input type="text" name="entry.179082515" value="" class="ss-q-short" id="entry_179082515" dir="auto" aria-label="NRIC/FIN  Please enter in valid 9 characters number" aria-required="true" required="" pattern=".*^[STFG]\d{7}[A-Z]$.*" title="Please enter in valid 9 characters number">
-<!-- <div class="error-message" id="459514629_errorMessage">Please enter in valid 9 characters number</div>
-<div class="required-message">This is a required question</div> -->
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="auto" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_701025442"><div class="ss-q-title">Gender
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
-
-
-<ul class="ss-choices" role="radiogroup" aria-label="Gender  " style="list-style-type: none;"><li class="ss-choice-item">
-<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.960864538" value="Male" id="group_960864538_1" role="radio" class="ss-q-radio" aria-label="Male" required="" aria-required="true"></span>
-<span class="ss-choice-label">Male</span>
-</label></li> <li class="ss-choice-item">
-<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.960864538" value="Female" id="group_960864538_2" role="radio" class="ss-q-radio" aria-label="Female" required="" aria-required="true"></span>
-<span class="ss-choice-label">Female</span>
-</label></li></ul>
-<div class="error-message" id="701025442_errorMessage"></div>
+<!-- <div class="error-message" id="459514629_errorMessage">Please enter in valid 9 characters number</div> -->
 <!-- <div class="required-message">This is a required question</div> -->
 </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
 <div dir="auto" class="ss-item ss-item-required ss-date"><div class="ss-form-entry">
 <label class="ss-q-item-label" for="entry_22490150"><div class="ss-q-title">Date of Birth
 <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
 <span class="ss-required-asterisk" aria-hidden="true">*</span></div>
+<div class="ss-q-help ss-secondary-text" dir="auto">Applicants must be at least 18 years old</div></label>
+
+<input type="date" name="entry.22490150" value="" class="ss-q-date" dir="auto" id="entry_22490150" aria-label="Date of Birth Applicants must be at least 18 years old " aria-required="true" required="">
+<!-- <div class="required-message">This is a required question</div> -->
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="auto" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1120413287"><div class="ss-q-title">Mobile Number
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
 <div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
 
-<input type="date" name="entry.22490150" value="" class="ss-q-date" dir="auto" id="entry_22490150" aria-label="Date of Birth  " aria-required="true" required="">
+<input type="text" name="entry.1120413287" value="" class="ss-q-short" id="entry_1120413287" dir="auto" aria-label="Mobile Number  Mobile number is 8 numbers long" aria-required="true" required="" pattern=".*^\d{8}(?:[-\s])?$.*" title="Mobile number is 8 numbers long">
+<!-- <div class="error-message" id="558810005_errorMessage">Mobile number is 8 numbers long</div> -->
 <!-- <div class="required-message">This is a required question</div> -->
 </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
 <div dir="auto" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
@@ -387,18 +384,8 @@ input[type='text'], input:not([type]), textarea {
 <span class="ss-required-asterisk" aria-hidden="true">*</span></div>
 <div class="ss-q-help ss-secondary-text" dir="auto">Email should be lowercased</div></label>
 
-<input type="text" name="entry.72421677" value="" class="ss-q-short" id="entry_72421677" dir="auto" aria-label="Email  Please enter valid email address" aria-required="true" required="" pattern=".*^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$.*" title="Please enter valid email address">
+<input type="text" name="entry.72421677" value="" class="ss-q-short" id="entry_72421677" dir="auto" aria-label="Email Email should be lowercased Please enter valid email address" aria-required="true" required="" pattern=".*^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$.*" title="Please enter valid email address">
 <!-- <div class="error-message" id="393936337_errorMessage">Please enter valid email address</div>
-<div class="required-message">This is a required question</div> -->
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="auto" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1120413287"><div class="ss-q-title">Mobile Number
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
-
-<input type="text" name="entry.1120413287" value="" class="ss-q-short" id="entry_1120413287" dir="auto" aria-label="Mobile Number  Mobile number is 8 numbers long" aria-required="true" required="" pattern=".*^\d{8}(?:[-\s])?$.*" title="Mobile number is 8 numbers long">
-<!-- <div class="error-message" id="558810005_errorMessage">Mobile number is 8 numbers long</div>
 <div class="required-message">This is a required question</div> -->
 </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
 <div dir="auto" class="ss-item ss-item-required ss-select"><div class="ss-form-entry">
@@ -412,12 +399,12 @@ input[type='text'], input:not([type]), textarea {
 <!-- <div class="required-message">This is a required question</div> -->
 </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
 <div dir="auto" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_25695835"><div class="ss-q-title">Model of Phone
+<label class="ss-q-item-label" for="entry_25695835"><div class="ss-q-title">Model of Mobile Phone
 <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
 <span class="ss-required-asterisk" aria-hidden="true">*</span></div>
 <div class="ss-q-help ss-secondary-text" dir="auto">If previous submitted choice was &quot;Others&quot;, Please key in brand and model in this section.</div></label>
 
-<input type="text" name="entry.25695835" value="" class="ss-q-short" id="entry_25695835" dir="auto" aria-label="Model of Phone If previous submitted choice was &quot;Others&quot;, Please key in brand and model in this section. " aria-required="true" required="" title="">
+<input type="text" name="entry.25695835" value="" class="ss-q-short" id="entry_25695835" dir="auto" aria-label="Model of Mobile Phone If previous submitted choice was &quot;Others&quot;, Please key in brand and model in this section. " aria-required="true" required="" title="">
 <div class="error-message" id="1446287877_errorMessage"></div>
 <!-- <div class="required-message">This is a required question</div> -->
 </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
@@ -431,34 +418,60 @@ input[type='text'], input:not([type]), textarea {
 <!-- <div class="error-message" id="670801478_errorMessage">IMEI Number should be 15 characters</div>
 <div class="required-message">This is a required question</div> -->
 </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="auto" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_569534003"><div class="ss-q-title">Place of Purchase
+<div dir="auto" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1236750968"><div class="ss-q-title">Is the mobile phone purchased within a year?
 <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
 <span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="auto">Country where you purchased said mobile phone</div></label>
+<div class="ss-q-help ss-secondary-text" dir="auto">Mobile phone must be purchased for less than twelve (12) months.</div></label>
 
-<input type="text" name="entry.569534003" value="Singapore" class="ss-q-short" id="entry_569534003" dir="auto" aria-label="Place of Purchase Country where you purchased said mobile phone " aria-required="true" required="" title="">
-<div class="error-message" id="1004434030_errorMessage"></div>
+
+<ul class="ss-choices" role="radiogroup" aria-label="Is the mobile phone purchased within a year? Mobile phone must be purchased for less than twelve (12) months. "><li class="ss-choice-item">
+<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.294796791" value="Yes" id="group_294796791_1" role="radio" class="ss-q-radio" aria-label="Yes" required="" aria-required="true"></span>
+<span class="ss-choice-label">Yes</span>
+</label></li> <li class="ss-choice-item">
+<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.294796791" value="No" id="group_294796791_2" role="radio" class="ss-q-radio" aria-label="No" required="" aria-required="true"></span>
+<span class="ss-choice-label">No</span>
+</label></li></ul>
+<div class="error-message" id="1236750968_errorMessage"></div>
 <!-- <div class="required-message">This is a required question</div> -->
 </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="auto" class="ss-item ss-item-required ss-date"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_294796791"><div class="ss-q-title">Date of Purchase
+<div dir="auto" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1004434030"><div class="ss-q-title">Did you directly purchase the mobile phone from Singapore&#39;s mobile phone manufacturers/ distributors&#39; retail store?
 <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
 <span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+<div class="ss-q-help ss-secondary-text" dir="auto">eg. Singtel, Starhub, M1, Apple, Samsung</div></label>
 
-<input type="date" name="entry.294796791" value="" class="ss-q-date" dir="auto" id="entry_294796791" aria-label="Date of Purchase  " aria-required="true" required="">
+
+<ul class="ss-choices" role="radiogroup" aria-label="Did you directly purchase the mobile phone from Singapore&#39;s mobile phone manufacturers/ distributors&#39; retail store? eg. Singtel, Starhub, M1, Apple, Samsung "><li class="ss-choice-item">
+<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.569534003" value="Yes" id="group_569534003_1" role="radio" class="ss-q-radio" aria-label="Yes" required="" aria-required="true"></span>
+<span class="ss-choice-label">Yes</span>
+</label></li> <li class="ss-choice-item">
+<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.569534003" value="No" id="group_569534003_2" role="radio" class="ss-q-radio" aria-label="No" required="" aria-required="true"></span>
+<span class="ss-choice-label">No</span>
+</label></li></ul>
+<div class="error-message" id="1004434030_errorMessage"></div>
 <!-- <div class="required-message">This is a required question</div> -->
 </div></div></div>
-<input type="hidden" name="draftResponse" value="[null,null,&quot;2557809678742674055&quot;]
+<input type="hidden" name="draftResponse" value="[null,null,&quot;5569449843853172058&quot;]
 ">
 <input type="hidden" name="pageHistory" value="0">
 
 
 
-<input type="hidden" name="fbzx" value="2557809678742674055">
+<input type="hidden" name="fbzx" value="5569449843853172058">
 <div class="ss-send-email-receipt" style="margin-bottom: 4px;" dir="ltr"><label for="emailReceipt" style="display:inline;"></label></div>
 <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+<h6>By Submitting the form, I acknowledge that Sompo Insurance may collect, use, disclose and/or process my
+personal data in accordance with the Personal Data Protection Act 2012 for the purposes
+and uses described in Sompo Insurance’s Privacy Policy (including the provision of
+protection, services related to this insurance policy, screening activities in accordance with
+legal/regulatory obligations/risk management procedures). This may include disclosure to
+Sompo Insurance’s business partners, intermediaries, third party service providers and
+industry associations. Sompo Insurance’s Privacy Policy can be found at
+www.sompo.com.sg. I consent to receive marketing and promotional information from
+Sompo Insurance (e.g. via email, mail, SMS, etc.). I understand that I can withdraw or
+manage my consent to receive marketing and promotional information at
+www.sompo.com.sg</h6>
 <input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action ">
 </td>
 </tr></tbody></table></div></ol></form></div>
@@ -468,4 +481,4 @@ input[type='text'], input:not([type]), textarea {
 <script type="text/javascript">var submitted=false;</script>
 <script type="text/javascript">H5F.setup(document.getElementById('ss-form'));
           _initFormViewer(
-            "[100,null,[[[179082515,[[4,299,[\x22^[STFG]\\\\d{7}[A-Z]$\x22]\n,\x22Please enter in valid 9 characters number\x22]\n]\n]\n,[1305659754,[[4,299,[\x22^\\\\d{6}(?:[-\\\\s])?$\x22]\n,\x22Please enter in 6 character postal code\x22]\n]\n]\n,[72421677,[[4,299,[\x22[a-zA-Z0-9_\\\\.\\\\+-]+@[a-zA-Z0-9-]+\\\\.[a-zA-Z0-9-\\\\.]+\x22]\n,\x22Please enter valid email address\x22]\n]\n]\n,[1120413287,[[4,299,[\x22^\\\\d{8}(?:[-\\\\s])?$\x22]\n,\x22Mobile number is 8 numbers long\x22]\n]\n]\n,[423883520,[[4,299,[\x22^\\\\d{15}(?:[-\\\\s])?$\x22]\n,\x22IMEI Number should be 15 characters\x22]\n]\n]\n]\n]\n]\n");</script></div></body></html>
+            "[100,null,[[[179082515,[[4,299,[\x22^[STFG]\\\\d{7}[A-Z]$\x22]\n,\x22Please enter in valid 9 characters number\x22]\n]\n]\n,[1120413287,[[4,299,[\x22^\\\\d{8}(?:[-\\\\s])?$\x22]\n,\x22Mobile number is 8 numbers long\x22]\n]\n]\n,[1305659754,[[4,299,[\x22^\\\\d{6}(?:[-\\\\s])?$\x22]\n,\x22Please enter in 6 character postal code\x22]\n]\n]\n,[72421677,[[4,299,[\x22^[_a-z0-9-]+(\\\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\\\.[a-z0-9-]+)*(\\\\.[a-z]{2,4})$\x22]\n,\x22Please enter valid email address\x22]\n]\n]\n,[423883520,[[4,299,[\x22^\\\\d{15}(?:[-\\\\s])?$\x22]\n,\x22IMEI Number should be 15 characters\x22]\n]\n]\n]\n]\n]\n");</script></div></body></html>
