@@ -52,47 +52,42 @@ $(document).ready(function () {
   // Validating of IMEI number
   $('#entry_423883520').blur(function () {
     var imei = document.getElementById('entry_423883520').value
-    console.log(imei)
-    if (imei.length === 5) {
+    if (imei.length === 15) {
       var imeiDigit = 0
       var imeiWeight = 0
       var bEven = true
-      var sum = 0
+      var checkImeiSum = 0
+      var lastImeiNum = parseInt(imei.charAt(imei.length - 1))
       for (var i = 0; i < imei.length - 1; i++) {
         if (bEven) {
           // if positiin of digit in IMEI number is even keep it as per normal
           imeiDigit = parseInt(imei.charAt(i), 10)
-          console.log('Even numbers ' + imeiDigit)
           bEven = false
           imeiWeight += imeiDigit
-          console.log('Even Numbers total so far ' + imeiWeight)
         } else {
           // if position of digit in IMEI number is odd multiply by 2
           imeiDigit = parseInt(imei.charAt(i), 10) * 2
-          if (imeiDigit >= 10) {
-            sum += imeiDigit % 10
-            console.log(sum)
-            imeiDigit = Math.floor(imeiDigit / 10)
-            console.log(imeiDigit)
-            imeiWeight = imeiDigit + sum
-            console.log(imeiWeight)
-          }
-        //     while (imeiDigit > 0) {
-        //       sum += imeiDigit % 10
-        //       imeiDigit = Math.floor(imeiDigit / 10)
-        //       imeiWeight += imeiDigit
-          console.log('Odd numbers ' + imeiDigit)
           bEven = true
+          //  check if digits of the imei after multipication is two digits
+          if (imeiDigit >= 10) {
+            // add the sum of both the digits when the number is two digits
+            imeiDigit = (imeiDigit % 10 + Math.floor(imeiDigit / 10) % 10)
+          }
           imeiWeight += imeiDigit
-          console.log('Even Numbers total so far ' + imeiWeight)
         }
-        //   } else {
-        //     imeiWeight += imeiDigit
-        //     bEven = true
-        //   }
-        // }
       }
-      console.log('TOTAL VALUE of number is ' + imeiWeight)
+      // find the nearest tenth of the current IMEI number weight
+      checkImeiSum = (Math.round(imeiWeight / 10) * 10) - imeiWeight
+      // check if the last number of the imei is the same as the difference between the IMEI number weight and nearest tenth
+      if (lastImeiNum === checkImeiSum) {
+        console.log('IMEI is valid')
+        $('#entry_423883520').removeClass('error')
+        $('#entry_423883520').addClass('valid')
+      } else {
+        console.log('IMEI is invalid')
+        $('#entry_423883520').addClass('error')
+        $('#entry_423883520').removeClass('valid')
+      }
     }
   })
 })
