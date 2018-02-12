@@ -90,4 +90,19 @@ $(document).ready(function () {
       }
     }
   })
+  // google maps auto fill for address
+  var autocomplete = new google.maps.places.Autocomplete(
+    (document.getElementById('entry_1204299239')),
+    {types: ['geocode']}
+  )
+  // when user chooses an address from the drop down it will fire off a place_changed service
+  autocomplete.addListener('place_changed', fillInAddress)
+  function fillInAddress () {
+    var place = autocomplete.getPlace()
+    console.log(place.address_components)
+    var address1 = place.address_components[0].long_name + ' ' + place.address_components[1].long_name
+    document.getElementById('entry_1204299239').value = address1
+    var postalCode = place.address_components[5].long_name
+    document.getElementById('entry_1305659754').value = postalCode
+  }
 })
