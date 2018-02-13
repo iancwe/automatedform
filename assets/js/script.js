@@ -4,6 +4,7 @@ $(document).ready(function () {
   var hashParams = window.location.hash.substr(1).split('&')
   for (var i = 0; i < hashParams.length; i++) {
     var fieldsValue = hashParams[i].split('=')
+    document.getElementsByClassName(fieldsValue[0]).value = decodeURIComponent(fieldsValue[1])
     console.log(fieldsValue)
   }
   // NRIC number validation if its a proper number
