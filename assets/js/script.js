@@ -1,5 +1,11 @@
 $(document).ready(function () {
   console.log('jQuery up and running')
+  // prefill in form with url anchor
+  var hashParams = window.location.hash.substr(1).split('&')
+  for (var i = 0; i < hashParams.length; i++) {
+    var fieldsValue = hashParams[i].split('=')
+    console.log(fieldsValue)
+  }
   // NRIC number validation if its a proper number
   $('#entry_179082515').blur(function () {
     var icNum = document.getElementById('entry_179082515').value
